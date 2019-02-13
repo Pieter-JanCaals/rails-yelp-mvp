@@ -41,10 +41,11 @@ gem 'font-awesome-sass', '~> 5.0.9'
 gem 'simple_form'
 gem 'autoprefixer-rails'
 gem 'jquery-rails' # Add this line if you use Rails 5.1 or higher
+gem 'faker', git: 'https://github.com/stympy/faker.git', branch: 'master'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'pry-byebug'
 end
 
 group :development do
