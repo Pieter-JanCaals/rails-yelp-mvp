@@ -4,3 +4,10 @@
 <p><%= @restaurant.address %></p>
 <%= link_to 'back to list', restaurants_path %>
 <%= link_to 'see reviews',  restaurant_reviews_path(@restaurant.id)%>
+
+<h2>Create new review</h2>
+<%= simple_form_for [@restaurant, @review] do |f| %>
+  <%= f.input :content, class: "form-control" %>
+  <%= f.input :rating, collection: (0..5), class: "form-control" %>
+  <%= f.submit "Add new review", class: "btn btn-primary" %>
+<% end %>
